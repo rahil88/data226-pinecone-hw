@@ -165,7 +165,7 @@ with DAG(
                 })
             
             # Upsert to Pinecone
-            index.upsert(upsert_data)
+            index.upsert(vectors=upsert_data)
         
         print(f"Successfully upserted {len(df)} records to Pinecone")
         return index_name
